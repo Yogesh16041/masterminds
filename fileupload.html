@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <a href="attendence.html">back</a>
+    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .navigation-button {
+            background-color: #3498db; /* Blue color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>File Upload and Download</h2>
+
+    <!-- File Upload Form -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="assignmentFile">Upload Assignment:</label>
+        <input type="file" id="assignmentFile" name="assignmentFile" accept=".pdf, .doc, .docx">
+        <button type="button" onclick="uploadAssignment()">Upload</button>
+    </form>
+
+    <!-- File Download Links -->
+    <h3>Tutoring Materials:</h3>
+    <ul>
+        <li><a href="tutoring_materials/math_notes.pdf" download>Math Notes</a></li>
+        <li><a href="tutoring_materials/science_presentation.pptx" download>Science Presentation</a></li>
+        <!-- Add more download links as needed -->
+    </ul>
+
+    <script>
+        function uploadAssignment() {
+            const fileInput = document.getElementById('assignmentFile');
+            const file = fileInput.files[0];
+
+            if (file) {
+                // You can use AJAX to send the file to the server for processing
+                // For simplicity, let's just log the file information to the console.
+                console.log('Uploading file:', file.name, 'Type:', file.type, 'Size:', file.size);
+                
+                // Clear the file input after upload (optional)
+                fileInput.value = '';
+            } else {
+                alert('Please select a file to upload.');
+            }
+        }
+    </script>
+</body>
+<body>
+    <button class="navigation-button" onclick="navigateToPage2()" >submit</button>
+</form>
+
+
+<script>
+    function navigateToPage2() {
+        // Redirect to Page 2
+        window.location.href = 'chatbox.html';
+    }
+</script>
+    
+</body>
+
+    
+</html>

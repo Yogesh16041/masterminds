@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <a href="index.html">back</a>
+</body>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Scheduler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #cfcbcb;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #676363;
+        }
+        .navigation-button {
+            background-color: #3498db; /* Blue color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tutoring Schedule</h1>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Time Slot</th>
+            <th>Tutor</th>
+            <th>Student</th>
+            <th>Action</th>
+        </tr>
+        <!-- Add rows dynamically based on your data -->
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM - 11:00 AM</td>
+            <td>John Doe</td>
+            <td>Jane Smith</td>
+            <td><button>Cancel</button></td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+
+    <!-- Add form for scheduling new classes -->
+    <form>
+        <label for="day">Day:</label>
+        <input type="text" id="day" name="day" required>
+
+        <label for="time">Time Slot:</label>
+        <input type="text" id="time" name="time" required>
+
+        <label for="tutor">Tutor:</label>
+        <input type="text" id="tutor" name="tutor" required>
+
+        <label for="student">Student:</label>
+        <input type="text" id="student" name="student" required>
+        <button class="navigation-button" onclick="navigateToPage2()" >submit</button>
+    </form>
+
+
+    <script>
+        function navigateToPage2() {
+            // Redirect to Page 2
+            window.location.href = 'attendence.html';
+        }
+    </script>
+</body>
+
+</html>

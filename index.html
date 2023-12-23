@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Web App - Welcome to Tutorhub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/Users/yogeshkumar/Downloads/PicsArt_12-22-09.14.53.jpg');
+            background-color: #eef1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgb(65, 63, 64);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(25, 221, 232, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid rgb(71, 68, 68);
+            border-radius: 4px;
+        }
+            /* Style for the button */
+            .navigation-button {
+                background-color: #3498db; /* Blue color */
+                color: #fff; /* White text color */
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Welcome to Tutorhub</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button class="navigation-button" onclick="navigateToPage2()">submit</button>
+    </form>
+
+</body>
+    <script>
+        function navigateToPage2() {
+            // Redirect to Page 2
+            window.location.href = 'contact.html';
+        }
+    </script>
+
+
+
+</html>

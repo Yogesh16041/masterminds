@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <a href="fileupload.html">back</a>
+</body>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #userInput {
+            width: 70%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        #sendButton {
+            width: 28%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .navigation-button {
+            background-color: #3498db; /* Blue color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tutoring Chatbot</h2>
+
+    <div id="chatbox"></div>
+
+    <div>
+        <input type="text" id="userInput" placeholder="Type your question...">
+        <button id="sendButton" onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const message = userInput.value.trim();
+
+            if (message !== '') {
+                displayMessage('You', message);
+
+                // Simulate a response from the chatbot (replace this with actual NLP processing)
+                const botResponse = getBotResponse(message);
+                displayMessage('Chatbot', botResponse);
+
+                // Clear the input field
+                userInput.value = '';
+            }
+        }
+
+        function displayMessage(sender, message) {
+            const chatbox = document.getElementById('chatbox');
+            const messageElement = document.createElement('div');
+            messageElement.innerHTML = <strong>${sender}:${message}:</strong>
+            chatbox.appendChild(messageElement);
+
+            // Scroll to the bottom of the chatbox
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function getBotResponse(userMessage) {
+            // Simulate different responses based on user input (replace with actual NLP processing)
+            if (userMessage.toLowerCase().includes('hello')) {
+                return 'Hello! How can I help you today?';
+            } else if (userMessage.toLowerCase().includes('math')) {
+                return 'Sure, I can help you with math. What specific topic are you struggling with?';
+            } else {
+                return 'Im sorry, I didnt understand that. Please ask another question.';
+            }
+        }
+    </script>
+    <form>
+        <button class="navigation-button" onclick="navigateToPage2()" >submit</button>
+    </form>
+        <script>
+            function navigateToPage2() {
+                // Redirect to Page 2
+                window.location.href = 'reportgeneration.html';
+            }
+        </script>
+</body>
+</html>
